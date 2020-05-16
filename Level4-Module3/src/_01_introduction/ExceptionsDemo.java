@@ -19,8 +19,8 @@ public class ExceptionsDemo {
 					testMethod1(4);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println();
+					//e.printStackTrace();
+					System.out.println("There is an error!");
 				}
 		// 2. Now call testMethod1 with a value greater than 5. 
 		//    Running your program should not print the statement
@@ -31,7 +31,8 @@ public class ExceptionsDemo {
 					testMethod1(6);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					//e.printStackTrace();
+					System.out.println("There is also an error!");
 				}
 		// 3. Create a new class called CustomException that extends Exception.
 		//    Add a void method called terminate that simply calls System.exit(0);
@@ -45,8 +46,9 @@ public class ExceptionsDemo {
 					testMethod2(-5);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-					
+					//e.printStackTrace();
+					//e.terminate();
+					System.out.println("There is also an error here!");
 				}
 	}
 	
@@ -58,7 +60,7 @@ public class ExceptionsDemo {
 	
 	// 4. Create a static void method called testMethod2(int x) that throws
 	//    a CustomException if x is negative.
-	public static void testMethod2(int x) throws Exception{
+	public static void testMethod2(int x) throws CustomException{
 		if(x < 0) {
 			throw new CustomException();
 		}

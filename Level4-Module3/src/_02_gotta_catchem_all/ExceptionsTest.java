@@ -32,6 +32,8 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
+		double[] dubs = {0.0, 5.4, 8.9, 2.1};
+		
 		
 	}
 	
