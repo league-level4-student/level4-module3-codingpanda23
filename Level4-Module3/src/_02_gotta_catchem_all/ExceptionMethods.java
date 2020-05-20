@@ -1,5 +1,7 @@
 package _02_gotta_catchem_all;
 
+import java.util.Stack;
+
 public class ExceptionMethods {
 	
 	//divide method
@@ -10,7 +12,12 @@ public class ExceptionMethods {
 	}
 	//reverse method
 	public void reverseString(String s) {
-		
+		Stack<String> word = new Stack<String>();
+		for(int i = 0; i < s.length(); i--) {
+			word.push(s);
+			String t = word.pop();
+			System.out.println(t);
+		}
 	}
 	
 }
